@@ -1,4 +1,9 @@
 
+function Home(){
+    return(
+        <div>
+            <h2>Pagina Inicial</h2>
+=======
 import Link from 'next/link'
 
 function Home(){
