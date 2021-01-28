@@ -1,5 +1,7 @@
 import styles from '../components/index.module.css'
+import options from '../utils/options_page.json'
 import Link from 'next/link'
+
 
 function Index(){
     return(
@@ -9,42 +11,21 @@ function Index(){
             <h2>Desenvolvedor Full Stack</h2>  
             <br/>          
             <div className={styles.listOptions}>
-                <Link href='/resume'>
-                    <a>
-                        <div className={styles.itemListOptions}>
-                            <h3>Currículo</h3>
-                            <p>Conheça um pouco mais sobre minha trajetória profissional.</p>
-                        </div>
-                    </a>
-                </Link>
-                <Link href='https://www.linkedin.com/in/tiago-murilo-o-30876b14b/'>
-                    <a target='_blank'>
-                        <div className={styles.itemListOptions}>
-                            <h3>Linkedin</h3>
-                            <p>Acompanhe minhas publicações nesta rede social.</p>
-                        </div>
-                    </a>
-                </Link>
-                <Link href='https://github.com/tiagomol1'>
-                    <a target='_blank'>
-                        <div className={styles.itemListOptions}>
-                            <h3>Github</h3>
-                            <p>Veja alguns dos meus projetos, estudos e testes.</p>
-                        </div>
-                    </a>
-                </Link>
-                <Link href='/contact'>
-                    <a>
-                        <div className={styles.itemListOptions}>
-                            <h3>Contato</h3>
-                            <p>Para facilitar minha comunicação com vocês.</p>
-                        </div>
-                    </a>
-                </Link>
+                {options.map(option =>{
+                    return(
+                        <Link href={option.link}>
+                            <a>
+                                <div className={styles.itemListOptions}>
+                                    <h3>{option.title}</h3>
+                                    <p>{option.description}</p>
+                                </div>
+                            </a>
+                        </Link>
+                    )
+                })}
             </div>
-            <br/>
             <p className={styles.impactPhrase}>
-                "Cada sonho que você deixa pra trás, é um pedaço do seu futuro que deixa de existir." ~Steve Jobs
+                "A única maneira de fazer um excelente trabalho é amar o que você faz." ~Steve Jobs
             </p>
             <br/>
         </div>

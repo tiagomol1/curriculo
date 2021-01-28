@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Currículo",
+        "description": "Conheça um pouco mais sobre minha trajetória profissional.",
+        "link": "/resume"
+    },
+    {
+        "title": "Linkedin",
+        "description": "Acompanhe minhas publicações nesta rede social.",
+        "link": "https://www.linkedin.com/in/tiago-murilo-o-30876b14b/"
+    },
+    {
+        "title": "Github",
+        "description": "Veja alguns dos meus projetos, estudos e testes.",
+        "link": "https://github.com/tiagomol1"
+    },
+    {
+        "title": "Contato",
+        "description": "Para facilitar minha comunicação com vocês.",
+        "link": "/contact"
+    }
+]

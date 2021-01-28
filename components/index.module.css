@@ -39,14 +39,14 @@
 
 
 .body .listOptions .itemListOptions{
-    border: 0.2rem solid #eaeaea;
+    border: 0.1rem solid #eaeaea;
     border-radius: 0.7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 20rem;
     height: 7rem;
-    padding: 1rem;
+    padding: 1.2rem;
     margin: 1rem;
     text-decoration: none;
     transition: .2s;
@@ -63,7 +63,7 @@
 }
 
 .body .listOptions .itemListOptions:hover{
-    border: 0.2rem solid #4995c7;
+    border: 0.1rem solid #4995c7;
     color: #4995c7 !important;
 }
 
@@ -79,6 +79,7 @@
 }
 
 .body .impactPhrase{
+    margin-top: 2rem;
     font-style: italic;
     text-align: center;
 }
