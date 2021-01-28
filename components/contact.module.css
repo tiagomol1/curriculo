@@ -1,0 +1,31 @@
+
+.body input{
+    border: 1px solid WHITE;
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 0.7rem;
+    box-shadow: inset 0px 0px 15px 3px #0d111746;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.body button{
+    margin-top: 2rem;
+    width: 10rem;
+    font-size: 1.4rem;
+    height: 2.5rem;
+    border: 1px solid #0D1117;
+    background-color: #0D1117;
+    border-radius: 0.7rem;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.body button:hover{
+    color: #0D1117;
+    background-color: white;
+}

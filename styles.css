@@ -17,5 +17,21 @@ body{
 h2{
     font-family: Roboto, sans-serif;
     font-weight: 400;
-    color: #0D1117;
+    color: #333333;
+}
+
+h3{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: #333333;
+}
+
+ṕ{
+    font-weight: 400;
+    color: #333333;
+}
+
+
+a{
+    text-decoration: none;
 }
