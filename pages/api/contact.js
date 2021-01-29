@@ -6,9 +6,6 @@ const emailRece = process.env.EMAIL_RECEIVE
 export default async function Contact(request, response){
     
     const { name, email, phone, text } = request.body
-    console.log(emailPass)
-    console.log(emailRece)
-    console.log(emailSend)
 
     if(request.method == 'POST'){   
 
