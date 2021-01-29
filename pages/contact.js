@@ -36,6 +36,7 @@ function Contact(){
     return(
         <div className={style.body}>
             <h1>Contato</h1>
+            <p>test</p>
             <form action="post" onSubmit={handleSubmit}>
                 <input type="text" placeholder='Nome' onChange={e => setName(e.target.value)} required/>
                 <input type="email" placeholder='Email' onChange={e => setEmail(e.target.value)} required/>
