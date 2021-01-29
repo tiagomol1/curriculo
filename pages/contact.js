@@ -1,13 +1,13 @@
 import style from '../components/contact.module.css'
 import { useState } from 'react'
-const token = process.env.API_SECRET
+import router from 'next/router'
 
 function Contact(){
     const [name, setName] = useState('');
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [text, setText] = useState('')
-
+    
     async function handleSubmit(e){
         e.preventDefault()
 
@@ -26,7 +26,7 @@ function Contact(){
                 })            
             })
             const response = await request.json();
-            alert(JSON.stringify(response))
+            alert(`${response.data.name}, seus dados foram enviados com sucesso`)
         } catch (error) {
             return alert('Erro ao realizar envio de dados para contato.')            
         }
@@ -36,13 +36,15 @@ function Contact(){
     return(
         <div className={style.body}>
             <h1>Contato</h1>
-            <p>test</p>
             <form action="post" onSubmit={handleSubmit}>
                 <input type="text" placeholder='Nome' onChange={e => setName(e.target.value)} required/>
                 <input type="email" placeholder='Email' onChange={e => setEmail(e.target.value)} required/>
                 <input type="phone" placeholder='Telefone' onChange={e => setPhone(e.target.value)} required/>
                 <textarea cols="30" rows="10" onChange={e => setText(e.target.value)}></textarea>
-                <button type='submit'>Enviar</button>
+                <div>
+                    <button type='button' onClick={() => { router.push('/') }} className={style.buttonVoltar}>Voltar</button>
+                    <button type='submit'>Enviar</button>
+                </div>
             </form>
         </div>
     )
