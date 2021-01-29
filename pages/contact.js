@@ -3,7 +3,6 @@ import { useState } from 'react'
 const token = process.env.API_SECRET
 
 function Contact(){
-    console.log(TOKEN)
     const [name, setName] = useState('');
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
@@ -17,8 +16,7 @@ function Contact(){
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'authorization': TOKEN
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     name: name,
@@ -28,6 +26,7 @@ function Contact(){
                 })            
             })
             const response = await request.json();
+            alert(JSON.stringify(response))
         } catch (error) {
             return alert('Erro ao realizar envio de dados para contato.')            
         }
