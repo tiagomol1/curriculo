@@ -2,7 +2,6 @@ import styles from '../components/index.module.css'
 import options from '../utils/options_page.json'
 import Link from 'next/link'
 
-
 function Index(){
     return(
         <div className={styles.body}>
