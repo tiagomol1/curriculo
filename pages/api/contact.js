@@ -27,16 +27,7 @@ export default async function Contact(request, response){
                 text: `Olá, \n\nSegue dados enviados: \n- Nome: ${name} \n- E-mail: ${email} \n- Telefone: ${phone} \n- Texto:\n---------\n ${text}\n--------- \n\n Att. notify.tiagomurilo`
             }; 
 
-            const date = new Date();
-            const dateNow = date.toGMTString()
-
-            mailTransporter.sendMail(mailDetails, function(err, data) { 
-                if(err) { 
-                    console.log(dateNow + ' - Ocorreu algum erro ao tentar enviar o contato'); 
-                } else { 
-                    console.log(dateNow + ' - Sucesso ao enviar o contato'); 
-                } 
-            }); 
+            await mailTransporter.sendMail(mailDetails)
 
             return response.json({ 
                 status: 200,
