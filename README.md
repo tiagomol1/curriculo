@@ -1,3 +1,3 @@
-# Curriculo
+# About-me
 
-Acesso --> https://tiago-murilo.vercel.app/
+Access --> https://tiago-murilo.vercel.app/
